@@ -62,24 +62,54 @@ let upperCase=false
       /  /  |     ||   _/|  | |_|  |_||     || |___ 
      /   |_ |  _  ||  |  |  |   |  |  |  _  ||     |
      |     ||  |  ||  |  |  |   |  |  |  |  ||     |
-     |____||__|__||__| |____|  |__|  |__|__||_____|
+      |____||__|__||__| |____|  |__|  |__|__||_____|
                                                   
 
       `)
       } else{
-        console.log(`
-       |"|      
-      _|_|_  add in Capital letters to be secure
-      (o o) /  
+         console.log(`
+        |"|      
+       _|_|_  add in Capital letters to be secure
+       (o o) /  
     ooO--(_)--Ooo-
     `)
       }
 if (length===true && upperCase===true){
   setPassword=password
-  console.log(`your username is ${username} and password is ${setPassword}`)
-}
-        reader.close()
+  // console.log(`your username is ${username} and password is ${setPassword}`)
+  console.log("hey that's great! We've got the username and password stored for you now")
+
+console.log(`let's practice!`)
+
+reader.question(`What's your username?`, function(input){
+if (input===username){
+  console.log("nice!")
+  reader.question('your secure password?', function(input){
+    if (input===setPassword){
+
+      console.log(`
+You got it! Let's go!
+             .--~~,___.
+:-....,-------'   '._.'
+ '-,,,  ,_      ;'
+  _,-' ,' -__; '--.
+ (_/'~~      ''''(;
+
+      `)
+
+    } else {
+      "secure passwords can be hard to remember :( "
+    }
+  
+  reader.close()
+} 
+
+  )}else{console.log("did you forget who you were? :/")}
+
+})}
+
+
+ 
       }
     )
-
 })
