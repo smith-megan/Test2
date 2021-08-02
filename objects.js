@@ -21,9 +21,11 @@ const me={
   state: "Utah",
   age: 29,
   greeter: function() {
-    return `Hello! My name is ${me.firstName} and I live in ${me.state}`
+    return `Hello! My name is ${this.firstName} and I live in ${this.state}`
   }
 }
+
+//updated the reference to be 'this' which is much better than referencing the object me in global scope.
 
 // console.log(me)
 // console.log(me.greeter())
